@@ -1,235 +1,31 @@
 @extends('layouts.app')
 
 @section('css')
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #ffffff;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 40px;
-            color: #ffffff;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-            letter-spacing: 2px;
-            font-weight: 300;
-            position: relative;
-        }
-
-        h1::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, #533483, #1e3a8a);
-            border-radius: 2px;
-        }
-
-        form {
-            background: linear-gradient(145deg, #2a2a40 0%, #1a1a30 100%);
-            padding: 50px 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-            width: 100%;
-            max-width: 600px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 10px;
-            margin-top: 25px;
-            color: #ffffff;
-            font-weight: 600;
-            font-size: 16px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        label:first-of-type {
-            margin-top: 0;
-        }
-
-        input[type="text"],
-        input[type="number"],
-        input[type="file"],
-        textarea {
-            width: 100%;
-            padding: 15px 20px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
-            font-size: 16px;
-            background: rgba(255, 255, 255, 0.05);
-            color: #ffffff;
-            transition: all 0.3s ease;
-            outline: none;
-            font-family: inherit;
-            margin-bottom: 10px;
-        }
-
-        input[type="text"]:focus,
-        input[type="number"]:focus,
-        input[type="file"]:focus,
-        textarea:focus {
-            border-color: #533483;
-            background: rgba(83, 52, 131, 0.1);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(83, 52, 131, 0.3);
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-            max-height: 250px;
-        }
-
-        input[type="file"] {
-            padding: 12px 20px;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        input[type="file"]::-webkit-file-upload-button {
-            background: linear-gradient(90deg, #533483 0%, #1e3a8a 100%);
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            margin-right: 15px;
-            transition: all 0.3s ease;
-        }
-
-        input[type="file"]::-webkit-file-upload-button:hover {
-            background: linear-gradient(90deg, #6b46c1 0%, #2563eb 100%);
-            transform: translateY(-1px);
-        }
-
-        br {
-            display: none;
-        }
-
-        /* Placeholder styles */
-        input::placeholder,
-        textarea::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-            font-style: italic;
-        }
-
-        /* Focus effects */
-        input:focus+br+label,
-        textarea:focus+br+label {
-            color: #533483;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Hover effects */
-        form:hover {
-            box-shadow: 0 20px 50px rgba(83, 52, 131, 0.2);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            body {
-                padding: 20px 10px;
-            }
-
-            form {
-                padding: 30px 20px;
-            }
-
-            h1 {
-                font-size: 2em;
-                margin-bottom: 30px;
-            }
-
-            label {
-                font-size: 14px;
-            }
-
-            input[type="text"],
-            input[type="number"],
-            input[type="file"],
-            textarea {
-                padding: 12px 16px;
-                font-size: 14px;
-            }
-        }
-
-        /* Additional styling for better UX */
-        input[type="number"] {
-            -moz-appearance: textfield;
-        }
-
-        input[type="number"]::-webkit-outer-spin-button,
-        input[type="number"]::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-
-        /* Custom scrollbar for textarea */
-        textarea::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        textarea::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-        }
-
-        textarea::-webkit-scrollbar-thumb {
-            background: linear-gradient(90deg, #533483, #1e3a8a);
-            border-radius: 4px;
-        }
-
-        textarea::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(90deg, #6b46c1, #2563eb);
-        }
-    </style>
+<link rel="stylesheet" href="{{asset('css/createStyle.css')}}">
 @endsection
 
 @section('content')
     <h1>FORM TO CREATE A PRODUCT</h1>
 
-@@ -23,6 +246,5 @@
+    <form action="" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name">
+        <br>
+
+        <label for="description">Description:</label>
+        <textarea name="description" cols="30" rows="10"></textarea>
+        <br>
+
+        <label for="price">Price</label>
+        <input type="number" name="price">
+        <br>
+
+        <label for="image">Image:</label>
+        <input type="file" name="image">
+        <br>
+
         <label for="brand">Brand</label>
         <input type="text" name="brand">
-
 
     </form>
 @endsection
