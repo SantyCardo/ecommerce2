@@ -5,7 +5,7 @@
 
     <div class="card">
         <div class="card-body">
-            <form action="{{route('admin.category.store')}}" method="post">
+            <form action="{{route('admin.categories.store')}}" method="post">
                 @csrf
                 <div class="input-group input-group-outline mp-4">
                     <input type="text" name="name" class="form-control">

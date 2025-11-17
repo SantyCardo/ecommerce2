@@ -7,51 +7,51 @@
 @section('content')
     <!-- Breadcrumb -->
     <div class="breadcrumb">
-        <a href="index.html">Inicio</a> > <a href="categoria-smartphones.html">Smartphones</a> > iPhone 14 Pro Max
+        <a href="index.html">Inicio</a> > <a href="categoria-consolas.html">Consolas</a> > PlayStation 5
     </div>
 
     <!-- Product Detail -->
     <main class="product-detail">
         <!-- Product Images -->
         <section class="product-image-section">
-            <div class="main-image">📱</div>
+            <div class="main-image">🎮</div>
             <div class="image-thumbnails">
-                <div class="thumbnail active">📱</div>
-                <div class="thumbnail">📷</div>
-                <div class="thumbnail">🔋</div>
-                <div class="thumbnail">📺</div>
+                <div class="thumbnail active">🎮</div>
+                <div class="thumbnail">💿</div>
+                <div class="thumbnail">🔊</div>
+                <div class="thumbnail">⚙️</div>
             </div>
         </section>
 
         <!-- Product Information -->
         <section class="product-info-section">
-            <div class="product-category">Smartphone</div>
-            <h1 class="product-title">iPhone 14 Pro Max</h1>
+            <div class="product-category">Consola</div>
+            <h1 class="product-title">PlayStation 5</h1>
 
             <div class="product-rating">
                 <div class="stars">★★★★★</div>
                 <span class="rating-text">(4.8/5 - 2,547 reseñas)</span>
             </div>
 
-            <div class="product-price">$1,199.99</div>
+            <div class="product-price">$499.99</div>
 
             <div class="product-description">
-                El iPhone 14 Pro Max representa la cúspide de la innovación móvil de Apple. Con su pantalla Super Retina
-                XDR de 6.7 pulgadas, el chip A16 Bionic más avanzado y un sistema de cámaras profesional, este
-                dispositivo redefine lo que puedes hacer con un smartphone.
+                PlayStation 5 lleva el gaming de nueva generación con gráficos 4K, ray tracing y carga ultra rápida.
+                Su SSD NVMe, audio 3D y el mando DualSense con gatillos adaptativos ofrecen una experiencia inmersiva
+                y fluida tanto en exclusivas como en títulos multiplataforma.
             </div>
 
             <div class="product-features">
                 <h3 class="features-title">Características Principales</h3>
                 <ul class="features-list">
-                    <li>Pantalla Super Retina XDR de 6.7 pulgadas</li>
-                    <li>Chip A16 Bionic con GPU de 5 núcleos</li>
-                    <li>Sistema de cámaras Pro con teleobjetivo</li>
-                    <li>Grabación de video 4K Dolby Vision</li>
-                    <li>Batería de hasta 29 horas de reproducción de video</li>
-                    <li>Resistencia al agua IP68</li>
-                    <li>Face ID avanzado</li>
-                    <li>5G ultrarrápido</li>
+                    <li>CPU AMD Zen 2 y GPU RDNA 2 con ray tracing</li>
+                    <li>SSD NVMe ultrarrápido para cargas casi instantáneas</li>
+                    <li>Audio 3D inmersivo</li>
+                    <li>Mando DualSense con gatillos adaptativos y vibración háptica</li>
+                    <li>Salida hasta 4K a 120 Hz</li>
+                    <li>Retrocompatibilidad con títulos de PS4</li>
+                    <li>Streaming y captura integrados</li>
+                    <li>Wi‑Fi 6 y Bluetooth</li>
                 </ul>
             </div>
 
@@ -73,36 +73,32 @@
                 <h3 class="specs-title">Especificaciones Técnicas</h3>
                 <div class="specs-grid">
                     <div class="spec-item">
-                        <span class="spec-label">Pantalla</span>
-                        <span class="spec-value">6.7" Super Retina XDR</span>
+                        <span class="spec-label">Resolución</span>
+                        <span class="spec-value">Hasta 4K HDR a 120 Hz</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Procesador</span>
-                        <span class="spec-value">A16 Bionic</span>
+                        <span class="spec-label">CPU</span>
+                        <span class="spec-value">AMD Zen 2</span>
                     </div>
                     <div class="spec-item">
                         <span class="spec-label">Almacenamiento</span>
-                        <span class="spec-value">128GB / 256GB / 512GB / 1TB</span>
+                        <span class="spec-value">SSD NVMe de alta velocidad</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Cámara Principal</span>
-                        <span class="spec-value">48MP + 12MP + 12MP</span>
+                        <span class="spec-label">GPU</span>
+                        <span class="spec-value">RDNA 2 con ray tracing</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Cámara Frontal</span>
-                        <span class="spec-value">12MP TrueDepth</span>
+                        <span class="spec-label">Audio</span>
+                        <span class="spec-value">3D Audio (Tempest)</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Batería</span>
-                        <span class="spec-value">Hasta 29h reproducción video</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Sistema Operativo</span>
-                        <span class="spec-value">iOS 16</span>
+                        <span class="spec-label">Sistema</span>
+                        <span class="spec-value">PlayStation OS</span>
                     </div>
                     <div class="spec-item">
                         <span class="spec-label">Conectividad</span>
-                        <span class="spec-value">5G, Wi-Fi 6, Bluetooth 5.3</span>
+                        <span class="spec-value">Wi‑Fi 6, Bluetooth 5.1, HDMI 2.1</span>
                     </div>
                 </div>
             </div>

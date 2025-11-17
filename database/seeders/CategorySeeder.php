@@ -11,18 +11,28 @@ class CategorySeeder extends Seeder
 
     public function run(): void
     {
-        $myCategory1 = new Category();
-        $myCategory1->name = "Electronics";
-        $myCategory1->save();
+        Category::query()->delete();
 
-        $myCategory2 = new Category();
-        $myCategory2->name = "Clothing";
-        $myCategory2->save();
+        $items = [
+            'Consolas',
+            'Controladores',
+            'Accesorios',
+            'Audio Gamer',
+            'VR',
+            'Retro',
+            'PC Gamer',
+            'Monitores',
+            'Sillas Gamer',
+            'Teclados',
+            'Ratones',
+            'Streaming',
+            'Juegos Físicos',
+            'Juegos Digitales',
+            'Tarjetas Prepago'
+        ];
 
-        $myCategory3 = new Category();
-        $myCategory3->name = "Computers";
-        $myCategory3->save();
-
-        Category::factory(1000)->create();
+        foreach ($items as $name) {
+            Category::create(['name' => $name]);
+        }
     }
 }

@@ -1,25 +1,26 @@
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #ffffff;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0b0b0b 0%, #121212 60%, #1a1a1a 100%);
+            color: #EDEDED;
             line-height: 1.6;
             min-height: 100vh;
         }
 
         /* Header - mismo que la página principal */
         .header {
-            background: linear-gradient(90deg, #2c1810 0%, #533483 50%, #1e3a8a 100%);
+            background: linear-gradient(90deg, #0b0b0b 0%, #121212 60%, #1a1a1a 100%);
             padding: 20px 0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
             position: sticky;
             top: 0;
             z-index: 100;
+            border-bottom: 1px solid #222;
         }
 
         .nav-container {
@@ -90,7 +91,7 @@
         }
 
         .breadcrumb a {
-            color: #00d4aa;
+            color: #E50914;
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -139,7 +140,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(83, 52, 131, 0.1) 0%, rgba(30, 58, 138, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(229, 9, 20, 0.12) 0%, rgba(176, 0, 32, 0.12) 100%);
         }
 
         .image-thumbnails {
@@ -165,9 +166,9 @@
 
         .thumbnail:hover,
         .thumbnail.active {
-            border-color: #533483;
+            border-color: #E50914;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(83, 52, 131, 0.3);
+            box-shadow: 0 5px 15px rgba(229, 9, 20, 0.35);
         }
 
         /* Product Info Section */
@@ -176,7 +177,7 @@
         }
 
         .product-category {
-            color: #00d4aa;
+            color: #E50914;
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -212,9 +213,9 @@
         .product-price {
             font-size: 2.5em;
             font-weight: bold;
-            color: #00d4aa;
+            color: #E50914;
             margin-bottom: 30px;
-            text-shadow: 0 2px 4px rgba(0, 212, 170, 0.3);
+            text-shadow: 0 2px 4px rgba(229, 9, 20, 0.3);
         }
 
         .product-description {
@@ -225,7 +226,7 @@
             padding: 25px;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 15px;
-            border-left: 4px solid #533483;
+            border-left: 4px solid #E50914;
         }
 
         .product-features {
@@ -277,7 +278,7 @@
         .quantity-btn {
             width: 40px;
             height: 40px;
-            background: linear-gradient(90deg, #533483 0%, #1e3a8a 100%);
+            background: linear-gradient(90deg, #B00020 0%, #E50914 100%);
             color: white;
             border: none;
             border-radius: 8px;
@@ -288,7 +289,7 @@
         }
 
         .quantity-btn:hover {
-            background: linear-gradient(90deg, #6b46c1 0%, #2563eb 100%);
+            background: linear-gradient(90deg, #ff1f2d 0%, #ff3640 100%);
             transform: translateY(-2px);
         }
 
@@ -313,7 +314,7 @@
         .btn-primary {
             flex: 1;
             padding: 18px;
-            background: linear-gradient(90deg, #533483 0%, #1e3a8a 100%);
+            background: linear-gradient(90deg, #B00020 0%, #E50914 100%);
             color: white;
             border: none;
             border-radius: 12px;
@@ -323,13 +324,13 @@
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 1px;
-            box-shadow: 0 5px 15px rgba(83, 52, 131, 0.3);
+            box-shadow: 0 5px 15px rgba(229, 9, 20, 0.35);
         }
 
         .btn-primary:hover {
-            background: linear-gradient(90deg, #6b46c1 0%, #2563eb 100%);
+            background: linear-gradient(90deg, #ff1f2d 0%, #ff3640 100%);
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(83, 52, 131, 0.4);
+            box-shadow: 0 8px 25px rgba(229, 9, 20, 0.45);
         }
 
         .btn-secondary {

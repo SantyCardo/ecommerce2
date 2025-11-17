@@ -10,18 +10,33 @@ class BrandSeeder extends Seeder
 {
     public function run(): void
     {
-        $myBrand1 = new Brand();
-        $myBrand1->name = "Apple";
-        $myBrand1->save();
+        Brand::query()->delete();
 
-        $myBrand2 = new Brand();
-        $myBrand2->name = "Samgsumg";
-        $myBrand2->save();
+        $items = [
+            'Sony PlayStation',
+            'Microsoft Xbox',
+            'Nintendo',
+            'SEGA',
+            'Valve',
+            'Razer',
+            'Logitech G',
+            'HyperX',
+            'SteelSeries',
+            'Corsair',
+            'ASUS ROG',
+            'MSI',
+            'Alienware',
+            'Acer Predator',
+            'HP OMEN',
+            'Turtle Beach',
+            'Elgato',
+            'PowerA',
+            'PDP Gaming',
+            '8BitDo'
+        ];
 
-        $myBrand3 = new Brand();
-        $myBrand3->name = "Xiaomi";
-        $myBrand3->save();
-
-        Brand::factory(1000)->create();
+        foreach ($items as $name) {
+            Brand::create(['name' => $name]);
+        }
     }
 }

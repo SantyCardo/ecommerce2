@@ -18,10 +18,33 @@ class ProductFactory extends Factory
      */
     public function definition(): array
     {
+        $names = [
+            'PlayStation 5',
+            'Xbox Series X',
+            'Xbox Series S',
+            'Nintendo Switch OLED',
+            'Nintendo Switch Lite',
+            'DualSense Controller',
+            'Xbox Wireless Controller',
+            'Pro Controller',
+            'Razer BlackShark V2',
+            'Logitech G502',
+            'SteelSeries Arctis Nova',
+            'Corsair K95 Keyboard',
+            'ASUS ROG Gaming Monitor',
+            'MSI Gaming Laptop',
+            'HP OMEN Headset',
+            'Acer Predator Chair',
+            'Elgato Stream Deck',
+            'Turtle Beach Recon',
+            '8BitDo SN30 Pro',
+            'PowerA Enhanced Wired Controller'
+        ];
+
         return [
-            'name' => fake()->name,
-            'price' => fake()->randomFloat(2, 100, 1000000),
-            'description' => fake()->paragraph(),
+            'name' => fake()->randomElement($names),
+            'price' => fake()->randomFloat(2, 99, 1499),
+            'description' => fake()->sentence(12),
             'category_id' => Category::inRandomOrder()->first()->id,
             'brand_id' => Brand::inRandomOrder()->first()->id,
         ];

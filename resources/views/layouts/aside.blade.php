@@ -1,4 +1,4 @@
-  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-radius-lg fixed-start ms-2  bg-white my-2"
+<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-radius-lg fixed-start ms-2  bg-white my-2"
     id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-dark opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
@@ -20,13 +20,13 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="../pages/tables.html">
+          <a class="nav-link {{Request::is('admin/products')?'active bg-gradient-dark text-white' : 'text-dark'}}" href="{{route('admin.products.index')}}">
             <i class="material-symbols-rounded opacity-5">table_view</i>
-            <span class="nav-link-text ms-1">products</span>
+            <span class="nav-link-text ms-1">Products</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{Request::is('admin/category/create')?'active bg-gradient-dark text-white' : 'text-dark'}} "href="{{route('admin.category.create')}}">
+          <a class="nav-link {{Request::is('admin/categories')?'active bg-gradient-dark text-white' : 'text-dark'}}" href="{{route('admin.categories.create')}}">
             <i class="material-symbols-rounded opacity-5">receipt_long</i>
             <span class="nav-link-text ms-1">Categories</span>
           </a>
